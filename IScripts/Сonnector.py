@@ -16,7 +16,7 @@ class AiPlayer:
         sendMessage(socket_to_server, sending_message)
         while True:
             getMessage(socket_to_server)
-            sendMessage(socket_to_server, input("AI(you)> "))
+            sendMessage(socket_to_server, input("AI (you)> "))
 
 
 newAIPlayer = AiPlayer()
