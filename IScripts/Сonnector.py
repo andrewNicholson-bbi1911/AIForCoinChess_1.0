@@ -1,5 +1,5 @@
 import socket
-from IScripts.ActionsWithServer import getMessage
+from IScripts.ActionsWithServer import getMessage, sendMessage
 
 
 class AiPlayer:
@@ -13,10 +13,14 @@ class AiPlayer:
             getMessage(socket_to_server)
             break
         sending_message = "Connected"
-        sending_message_length = int(len(sending_message))
-        socket_to_server.send(sending_message_length.to_bytes(2, 'big'))
-        socket_to_server.send(sending_message.encode())
-        socket_to_server.send((0).to_bytes(0, 'big'))
+        sendMessage(socket_to_server, sending_message)
+        while True:
+            getMessage(socket_to_server)
+            break
+        sendMessage(socket_to_server, "roulingrouling")
+        while True:
+            getMessage(socket_to_server)
+            sendMessage(socket_to_server, input("enter new message: "))
 
 
 newAIPlayer = AiPlayer()
