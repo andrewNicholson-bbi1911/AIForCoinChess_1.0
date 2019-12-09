@@ -4,7 +4,7 @@ def getMessage(socket_to_server):
         message_from_server = socket_to_server.recv(12).decode()
     size_of_message_from_server = int(message_from_server)
     message_from_server = socket_to_server.recv(size_of_message_from_server).decode()
-    print("Server>" + message_from_server)
+    print("Server> " + message_from_server)
 
 
 def sendMessage(socket_to_server, message):
