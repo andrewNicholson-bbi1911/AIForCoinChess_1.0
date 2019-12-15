@@ -20,4 +20,4 @@ class AiPlayer:
 
 
 newAIPlayer = AiPlayer()
-newAIPlayer.connect()
+newAIPlayer.Connect()
