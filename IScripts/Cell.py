@@ -97,6 +97,17 @@ class Cell:
                             cell.setAbleToMove(rangeOfMove - 1)
                         break
 
+    def setAbleToBeAttacked(self, damage, splashable):
+        if self.heroOnCell != Cell():
+            self.heroOnCell.takenDamage+=damage;
+        if(splashable):
+            for cell in self.gameBoard.cellsOfBoard:
+                for coords in self.neighbourCells:
+                    if(cell.position == coords):
+                        cell.setAbleToBeAttacked(damage/2, False);
+                        break;
+
+
     def removeAll(self):
         self.active = False
         self.ableToMove = False

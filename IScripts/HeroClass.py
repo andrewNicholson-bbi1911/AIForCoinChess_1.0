@@ -18,27 +18,27 @@ class Hero:
     radiantHero = True
 
     def __init__(self, info):
-        code = int(info[0])
-        heroName = info[1]
-        hp = int(info[2])
-        damage = int(info[3])
-        attackRange = int(info[4])
-        attackSplashRadius = int(info[5])
-        moveRange = int(info[6])
-        spellID = int(info[7])
+        self.code = int(info[0])
+        self.heroName = info[1]
+        self.hp = int(info[2])
+        self.damage = int(info[3])
+        self.attackRange = int(info[4])
+        self.attackSplashRadius = int(info[5])
+        self.moveRange = int(info[6])
+        self.spellID = int(info[7])
 
     def __init__(self, pattern):
-        code = pattern.code
-        heroName = pattern.heroName
-        hp = pattern.hp
-        damage = pattern.damage
-        attackRange = pattern.attackRange
-        attackSplashRadius = pattern.attackSplashRadius
-        moveRange = pattern.moveRange
-        spellID = pattern.spellID
+        self.code = pattern.code
+        self.heroName = pattern.heroName
+        self.hp = pattern.hp
+        self.damage = pattern.damage
+        self.attackRange = pattern.attackRange
+        self.attackSplashRadius = pattern.attackSplashRadius
+        self.moveRange = pattern.moveRange
+        self.spellID = pattern.spellID
 
     def __init__(self):
-        code = 0
+        self.code = 0
 
     #def changePosition(self, newCoords, flying)
 
